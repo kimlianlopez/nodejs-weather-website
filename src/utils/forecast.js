@@ -7,9 +7,9 @@ const forecast = (lat, lng, callback) => {
         const { error:responseErr, currently } = {} = response.body
 
         if (error) {
-            callback('Unable to connect to weather services...', undefined)
+            callback('Unable to connect to weather API...', undefined)
         } else if (responseErr) {
-            callback('Unable to find locations. Try another search...', undefined)
+            callback('Unable to find locations. Try another addressss...', undefined)
         } else {
 
             const { temperature:temp, precipProbability:rainChance, summary } = currently
